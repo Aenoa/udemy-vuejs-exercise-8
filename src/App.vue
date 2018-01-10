@@ -23,6 +23,11 @@
             Servers,
             'app-server-details': ServerDetails,
             'app-footer': Footer
+        },
+        data: function() {
+            return {
+                selectedServer: null,
+            }
         }
     }
 </script>

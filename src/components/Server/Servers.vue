@@ -8,6 +8,7 @@
 
 <script>
 import Server from './Server.vue'
+import {EventBus} from '../../main'
 export default {
     components: {
         server: Server,
@@ -37,6 +38,11 @@ export default {
             this.selected = val;
         }
     },
+    created() {
+        EventBus.$on('editedServer', (value) => {
+            console.log('the following server was edited', value);
+        });
+    }
 }
 </script>
 
